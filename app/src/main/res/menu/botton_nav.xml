@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="home"
+        android:icon="@drawable/baseline_account_circle_24" />
+
+    <item
+        android:id="@+id/accessibilit"
+        android:icon="@drawable/baseline_accessibility_new_24"
+        android:title="accessibilit" />
+
+    <item
+        android:id="@+id/colections"
+        android:icon="@drawable/baseline_collections_24"
+        android:title="colections" />
+
+    <item
+        android:id="@+id/Exit"
+        android:icon="@drawable/baseline_exit_to_app_24"
+        android:title="exit" />
+
+</menu>
