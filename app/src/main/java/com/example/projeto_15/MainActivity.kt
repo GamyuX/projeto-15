@@ -1,6 +1,7 @@
 package com.example.projeto_15
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -18,18 +19,23 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(HomeFragment())
 
         binding.bottomNavigationView3.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.home -> replaceFragment(HomeFragment())
-                R.id.colections -> replaceFragment(collectionsFragment())
-                R.id.accessibilit -> replaceFragment(AccessibilitFragment())
-                R.id.Exit -> finish()
-                else -> {
-                    replaceFragment(HomeFragment())
-                }
-            }
+            selecionarMenu(it)
             true
         }
     }
+
+    private fun selecionarMenu(it: MenuItem) {
+        when (it.itemId) {
+            R.id.home -> replaceFragment(HomeFragment())
+            R.id.colections -> replaceFragment(collectionsFragment())
+            R.id.accessibilit -> replaceFragment(AccessibilitFragment())
+            R.id.Exit -> finish()
+            else -> {
+                replaceFragment(HomeFragment())
+            }
+        }
+    }
+
     private fun replaceFragment(fragment: Fragment){
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
